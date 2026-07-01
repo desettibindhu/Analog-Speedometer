@@ -6,4 +6,6 @@ Speedometer UI designed completely in QML
 
 Control Speedometer with Speed Control Buttons
 
-<video controls src="Screen Recording 2026-07-01 at 7.42.56 PM.mov" title="Title"></video>
+https://github.com/user-attachments/assets/1d20aad4-bdcf-48c0-86e2-be9a10c4f958
+
+
