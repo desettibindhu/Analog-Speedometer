@@ -21,6 +21,7 @@ qt_add_qml_module(appAnalog_Speedometer
     URI Analog_Speedometer
     QML_FILES
         Main.qml
+        Controls.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

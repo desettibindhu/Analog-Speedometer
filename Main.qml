@@ -13,6 +13,7 @@ ApplicationWindow {
     visible: true
     title: qsTr("Analog Speedometer")
     color: "#010b19"
+    property real needleAngle: 135
 
     Rectangle
     {
@@ -78,12 +79,14 @@ ApplicationWindow {
 
         Rectangle {
             id: needle
-            width: 150
+            width: 140
             height: 4
             color: "#ff4d4d"
             radius: 2
-            x: circle.width / 8
+            x: circle.width / 2
             y: circle.height / 2 - height / 2
+            transformOrigin: Item.Left
+            rotation: needleAngle
             z: 3
         }
 
@@ -95,6 +98,13 @@ ApplicationWindow {
             anchors.centerIn: parent
             z: 4
         }
+    }
+
+    Controls {
+        id: controls
+        anchors.top: parent
+        onIncreaseButtonPressed: needleAngle = Math.min(405, needleAngle + 10)
+        onDecreaseButtonPressed: needleAngle = Math.max(135, needleAngle - 10)
     }
 
 }
